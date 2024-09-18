@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+.psgText {
+    font-size: 40px; 
+    color: #FFFFFF;
+    text-align: center; 
+    margin-top: 20px; 
+    text-shadow: 4px 4px 6px #DA291C;
+    display: inline-block; 
+    padding: 10px; 
+    position: absolute;
+    top: 55%;
+    right: 550px;
+    transform: translateY(-25%);
+    border: 5px solid #004170;; 
+    display: inline-block;
+    background-color: #004170;
+    border-radius: 15px;
+    box-shadow: 0 0 0 5px #004170;
+    border: 2px solid white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.container-img {
+  position: relative;
+  }
+  .logo-psg {
+    height: 250px;
+    width: 250px;
+    animation: fadeIn 4s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  

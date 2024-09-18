@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+ 
+}  
+
+.fakeBody {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: white;
+  font-size: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.app {
+  height: 90vmin;
+  width: 90vmin;
+  position: relative;
+ 
+  
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ 
+  padding: 20px;
+  justify-items: center;
+ 
+  
+}
+
+.item {
+  cursor: pointer;
+  font-size: 0;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.detail {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  width: 90.1vmin;
+  cursor: pointer;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 100%;
+ 
+}
+
+.detail > img {
+  position: relative;
+  z-index: 1;
+  
+}
+
+.detail .content {
+  background: #232323;
+  padding: 2rem 1.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+  
+}
+
+.detail .content > * {
+  margin-bottom: 1rem;
+  
+}
+
+.detail .title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  
+}
+
+.detail .secondary {
+  color: lightgray;
+  text-decoration:underline;
+  
+}
+
+.detail .description {
+  line-height: 1.5;
+  
+}
