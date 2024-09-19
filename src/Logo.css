@@ -33,6 +33,7 @@
     height: 250px;
     width: 250px;
     animation: fadeIn 4s ease-in-out;
+    border-radius:36%;
   }
 
   @keyframes fadeIn {

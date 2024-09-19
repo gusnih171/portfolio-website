@@ -63,7 +63,7 @@ const CardFlip = () => {
       detailSecondary.innerText = data.secondary;
       detailDescription.innerText = data.text;
 
-      //stagger-fade the items out from the one that was selected in a staggered way (and kill the tween of the selected item)
+      
       gsap.to(items, { opacity: 1, stagger: { amount: 0.7, from: items.indexOf(item), grid: "auto" } }).kill(item);
       gsap.to(item, { opacity: 0.5 });
       activeItem = item;
@@ -73,23 +73,23 @@ const CardFlip = () => {
       document.removeEventListener('click', hideDetails);
       gsap.set(details, { overflow: "hidden" });
     
-      // record the current state of details
+      
       const state = Flip.getState(details);
     
-      // scale details down so that its detailImage fits exactly on top of activeItem
+      
       Flip.fit(details, activeItem, { scale: true, fitChild: detailImage });
     
-      // animate the other elements, like all fade all items back up to full opacity, slide the detailContent away, and tween the background color to white.
+      
       const tl = gsap.timeline();
       tl.set(details, { overflow: "hidden" })
         .to(detailContent, { yPercent: -100 })
         .to(activeItem, { opacity: 1 });
     
-      // animate from the original state to the current one.
+      
       Flip.from(state, {
         scale: true,
         duration: 0.5,
-        delay: 0.2, // 0.2 seconds because we want the details to slide up first, then flip.
+        delay: 0.2, 
         onInterrupt: () => tl.kill()
       })
         .set(details, { visibility: "hidden" });
@@ -97,18 +97,18 @@ const CardFlip = () => {
       activeItem = null;
     }
 
-    // Add click listeners
+    
     gsap.utils.toArray('.item').forEach(item => item.addEventListener('click', () => showDetails(item)));
 
     
 
-    // Cleanup event listeners on component unmount
+    
     return () => {
       document.removeEventListener('click', hideDetails);
     gsap.utils.toArray('.item').forEach(item => item.removeEventListener('click', () => showDetails(item)));
     };
 
-  }, []); // Empty dependency array ensures this effect runs once on mount
+  }, []); 
 
 return (
 <div className='fakeBody'>
