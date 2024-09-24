@@ -3,37 +3,72 @@
 
 
 .psgText {
-    font-size: 40px; 
-    color: #FFFFFF;
-    text-align: center; 
-    margin-top: 20px; 
-    text-shadow: 4px 4px 6px #DA291C;
-    display: inline-block; 
-    padding: 10px; 
-    position: absolute;
-    top: 55%;
-    right: 550px;
-    transform: translateY(-25%);
-    border: 5px solid #004170;; 
-    display: inline-block;
-    background-color: #004170;
-    border-radius: 15px;
-    box-shadow: 0 0 0 5px #004170;
-    border: 2px solid white;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-size: 40px; 
+  color: #FFFFFF;
+  text-align: center; 
+  margin-top: 20px; 
+  text-shadow: 4px 4px 6px #DA291C;
+  display: inline-block; 
+  padding: 10px; 
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  border: 5px solid #004170; 
+  background-color: #004170;
+  border-radius: 15px;
+  box-shadow: 0 0 0 5px #004170;
+  border: 2px solid white;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  grid-column: 2;
+  top:20%;
+  }
+  @media (max-width: 1200px) {
+    .psgText {
+      top: 19%;
+    }
   }
   
-
-.container-img {
-  position: relative;
+  @media (max-width: 768px) {
+    .psgText {
+      top: 22%;
+    }
   }
+  
+  @media (max-width: 480px) {
+    .psgText {
+      top: 16%;
+    }
+  }
+
+  .container-img {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  
   .logo-psg {
-    height: 250px;
-    width: 250px;
-    animation: fadeIn 4s ease-in-out;
-    border-radius:36%;
+    max-width: 85%; 
+    height: auto;
+    grid-column: 1;
+    border-radius: 38%;
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+    .logo-psg {
+      width: 38%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-psg {
+      width: 32%; 
+    }
   }
 
   @keyframes fadeIn {
@@ -45,4 +80,30 @@
     }
   }
   
-  
+  @media (max-width: 1200px) {
+    .psgText {
+        font-size: 35px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 992px) {
+    .psgText {
+        font-size: 30px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .psgText {
+        font-size: 25px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .psgText {
+        font-size: 20px;
+        padding: 4px;
+    }
+}
